@@ -1,0 +1,2 @@
+setTick(async => {
+});

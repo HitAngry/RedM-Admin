@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./index.css" rel="stylesheet">
+    <link href="./admin.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="adminPanelContainer">
+        <transition name="fade">
+          <div class="adminSwitchContent" v-if="!menu">
+            <h1 class="adminMenu">Admin</h1>
+            <button class="adminMenu" v-on:click="menu = 1">Téléportation</button>
+            <button class="adminMenu" v-on:click="menu = 2">Armes</button>
+            <button class="adminMenu" v-on:click="menu = 3">Véhicules</button>
+            <button class="adminMenu" v-on:click="menu = 4">Debug</button>
+          </div>
+        </transition>
+        <transition name="fade">
+          <div class="adminSwitchContent" v-if="menu">
+            <Teleport />
+          </div>
+        </transition>
+        <transition name="fade">
+          <button class="adminBackButton" v-on:click="menu = null" v-if="menu">Retour</button>
+        </transition>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="./components/locations.js"></script>
+  <script src="./components/Teleport.js"></script>
+  <script src="app.js"></script>
+</html>

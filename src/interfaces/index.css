@@ -1,0 +1,48 @@
+* {
+  outline: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+:root {
+  --primary-color: #1F1F1F;;
+  --secondary-color: #F1F1F1;
+  --third-color: #C00;
+}
+
+body {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "western";
+  src: url("./assets/fonts/western.woff") format("woff");
+ }
+
+p {
+  margin: 0;
+}
+
+.blank1 {
+  height: 5px;
+}
+
+.blank2 {
+  height: 15px;
+}
+
+.blank3 {
+  height: 25px;
+}
+
+.blank4 {
+  height: 35px;
+}
