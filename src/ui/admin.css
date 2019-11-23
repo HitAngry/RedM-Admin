@@ -78,8 +78,12 @@
   font-size: 16px;
 }
 
-.adminTeleport button:hover {
+.adminMenu:disabled {
+  opacity: 0.5;
+}
 
+.adminMenu:disabled:hover {
+  color: var(--secondary-color);
 }
 
 .adminMultiInput input {
@@ -90,10 +94,10 @@
   font-size: 16px;
   border-radius: 4px;
   border: none;
-  background-color: #1F1F1F;
+  background-color: var(--primary-color);
   padding-left: 5px;
   padding-right: 5px;
-  color: #FFFFFF;
+  color: var(--secondary-color);
 }
 
 .adminSelect {
