@@ -86,6 +86,14 @@
   color: var(--secondary-color);
 }
 
+.adminTeleport button:disabled {
+  opacity: 0.5;
+}
+
+.adminTeleport button:disabled:hover {
+  color: var(--secondary-color);
+}
+
 .adminMultiInput input {
   width: 70px;
   text-align: center;

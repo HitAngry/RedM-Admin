@@ -37,7 +37,7 @@ const Teleport = Vue.component('teleport', {
           </optgroup>
         </select>
       </div>
-      <button v-on:click="applyTeleportPlace">Téléportation</button>
+      <button v-on:click="applyTeleportPlace" :disabled="!select">Téléportation</button>
       <div class="blank2"></div>
       <label for="place">Coordonnées personnalisées</label>
       <div class="adminMultiInput">
@@ -45,7 +45,7 @@ const Teleport = Vue.component('teleport', {
         <input type="text" placeholder="Y" v-model="coords.y">
         <input type="text" placeholder="Z" v-model="coords.z">
       </div>
-      <button v-on:click="applyTeleportCustom">Téléportation</button>
+      <button v-on:click="applyTeleportCustom" :disabled="!coords.x || !coords.y || !coords.z" >Téléportation</button>
     </div>
   `
 });

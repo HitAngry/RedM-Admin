@@ -1,7 +1,9 @@
 var app = new Vue({
   el: '#app',
  components: {
-  Teleport: Teleport
+  Teleport: Teleport,
+  Entity: Entity,
+  Weapon: Weapon
  },
   data: {
     menu: null

@@ -16,15 +16,21 @@
           <div class="adminSwitchContent" v-if="!menu">
             <h1 class="adminMenu">Admin</h1>
             <button class="adminMenu" v-on:click="menu = 1">Téléportation</button>
-            <button class="adminMenu" v-on:click="menu = 2" disabled>Armes</button>
-            <button class="adminMenu" v-on:click="menu = 3" disabled>Véhicules</button>
-            <button class="adminMenu" v-on:click="menu = 4" disabled>Debug</button>
+            <button class="adminMenu" v-on:click="menu = 2" >Armes</button>
+            <button class="adminMenu" v-on:click="menu = 3" >Entitées</button>
+            <button class="adminMenu" v-on:click="menu = 4" disabled>Véhicules</button>
             <button class="adminMenu" v-on:click="quitMenu">Quit</button>
           </div>
         </transition>
         <transition name="fade">
-          <div class="adminSwitchContent" v-if="menu">
+          <div class="adminSwitchContent" v-if="menu === 1">
             <Teleport />
+          </div>
+          <div class="adminSwitchContent" v-if="menu === 2">
+              <Weapon />
+            </div>
+          <div class="adminSwitchContent" v-if="menu === 3">
+            <Entity />
           </div>
         </transition>
         <transition name="fade">
@@ -36,6 +42,10 @@
   <script src="https://unpkg.com/vue"></script>
   <script src="components/locations.js"></script>
   <script src="components/teleport.js"></script>
+  <script src="components/weapons.js"></script>
+  <script src="components/weapon.js"></script>
+  <script src="components/entities.js"></script>
+  <script src="components/entity.js"></script>
   <script src="script.js"></script>
   <script src="app.js"></script>
 </html>
