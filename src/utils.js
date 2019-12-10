@@ -1,8 +1,3 @@
-/**
- * loadModel : hash ( int )
- * Async function, request model and sleep during model is not loaded 
- * @param {number} hash Hash Model
- */
 const loadModel = async (hash) => {
   console.log("REQUEST LOADING MODEL " + hash)
   RequestModel(hash);
@@ -14,10 +9,22 @@ const loadModel = async (hash) => {
   }
 }
 
-/**
- * loadModel : hash ( int )
- * Async function, request model and sleep during model is not loaded 
- */
 const sleep = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const handleNuiFocus = () => {
+  if(!display) {
+    SetNuiFocus(true, true);
+    console.warn("ADMIN MENU - FOCUS:ON");
+  } else {
+    SetNuiFocus(false, false);
+    console.warn("ADMIN MENU - FOCUS:OFF");
+  }
+  display = !display;
+}
+
+const setDisplayMenuAdmin = () => {
+  handleNuiFocus();
+  SendNuiMessage(JSON.stringify({}));
 }

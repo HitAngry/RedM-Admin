@@ -21,7 +21,6 @@
 
 .adminPanelContainer h1 {
   font-size: 3.5em;
-  margin-top: 50px;
   margin-bottom: 40px;
 }
 
@@ -35,6 +34,7 @@
 }
 
 .adminSwitchContent {
+  margin-top: 57px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -42,7 +42,6 @@
 }
 
 .adminTeleport {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
@@ -67,7 +66,7 @@
   color: var(--secondary-color);
 }
 
-.adminTeleport button {
+.button-control {
   height: 35px;
   border: 0;
   background-color: var(--primary-color);

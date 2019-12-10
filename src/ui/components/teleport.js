@@ -31,13 +31,12 @@ const Teleport = Vue.component('teleport', {
     <div class="adminTeleport">
       <label for="place">Lieux pré-enregistrer</label>
       <div class="adminSelect">
-        <select name="places" id="place" v-model="select">
-          <optgroup v-for="(location, indexLocation) in locations" :label="location.location">
-            <option v-for="(place, indexPlace) in location.places" :value="indexLocation+':'+indexPlace">{{place.name}}</option>
-          </optgroup>
-        </select>
+      <v-select label="location" :options="locations">
+
+      </v-select>
+
       </div>
-      <button v-on:click="applyTeleportPlace" :disabled="!select">Téléportation</button>
+      <button class="button-control" v-on:click="applyTeleportPlace" :disabled="!select">Téléportation</button>
       <div class="blank2"></div>
       <label for="place">Coordonnées personnalisées</label>
       <div class="adminMultiInput">
@@ -45,7 +44,7 @@ const Teleport = Vue.component('teleport', {
         <input type="text" placeholder="Y" v-model="coords.y">
         <input type="text" placeholder="Z" v-model="coords.z">
       </div>
-      <button v-on:click="applyTeleportCustom" :disabled="!coords.x || !coords.y || !coords.z" >Téléportation</button>
+      <button class="button-control" v-on:click="applyTeleportCustom" :disabled="!coords.x || !coords.y || !coords.z" >Téléportation</button>
     </div>
   `
 });
