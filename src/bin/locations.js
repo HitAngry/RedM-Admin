@@ -1,5 +1,5 @@
 const locations = [{
-  "location" : "Mid-Eastern Locations",
+  "location" : "Mid-Eastern Locations", 
   "places": [{
     "name": "Emerald Ranch Fence",
     "coords": {

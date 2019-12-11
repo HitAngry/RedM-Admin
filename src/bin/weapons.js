@@ -1,6 +1,6 @@
 const weapons = [{
   "model": "p_camerabox01x",
-  "WEAPON_KIT_CAMERA",
+  "asset": "WEAPON_KIT_CAMERA",
   "ammo": null,
 },{
   "model": "s_interact_jug_pickup",

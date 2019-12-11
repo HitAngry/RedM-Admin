@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/vue-select/dist/vue-select.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/vue-multiselect@2.1.0/dist/vue-multiselect.min.css" rel="stylesheet"/>
     <link href="./index.css" rel="stylesheet" />
     <link href="./admin.css" rel="stylesheet" />
   </head>
@@ -19,7 +19,8 @@
             <button class="adminMenu" v-on:click="menu = 2" >Animations</button>
             <button class="adminMenu" v-on:click="menu = 3" >Armes</button>
             <button class="adminMenu" v-on:click="menu = 4" >Entitées</button>
-            <button class="adminMenu" v-on:click="menu = 5" disabled>Véhicules</button>
+            <button class="adminMenu" v-on:click="menu = 5" >Objets</button>
+            <button class="adminMenu" v-on:click="menu = 6" disabled>Véhicules</button>
             <button class="adminMenu" v-on:click="quitMenu">Quit</button>
           </div>
         </transition>
@@ -44,13 +45,12 @@
     </div>
   </body>
   <script src="https://unpkg.com/vue"></script>
-  <script src="https://unpkg.com/vue-select@3.0.2/dist/vue-select.js"></script>
+  <script src="https://unpkg.com/vue-multiselect@2.1.0"></script>
   <script src="../bin/locations.js"></script>
   <script src="../bin/objects.js"></script>
   <script src="../bin/scenarios.js"></script>
-  <script src="../bin/bin/entities.js"></script>
-  <script src="../bin/bin/weapons.js"></script>
-  <script src="components/scenarios.js"></script>
+  <script src="../bin/entities.js"></script>
+  <script src="../bin/weapons.js"></script>
   <script src="components/scenario.js"></script>
   <script src="components/teleport.js"></script>
   <script src="components/weapon.js"></script>

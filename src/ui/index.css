@@ -51,3 +51,7 @@ p {
 select option {
   color: black;
 }
+
+.mt-2 {
+  margin-top: 20px;
+}

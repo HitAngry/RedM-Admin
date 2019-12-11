@@ -4,8 +4,7 @@ var app = new Vue({
   Teleport: Teleport,
   Entity: Entity,
   Weapon: Weapon,
-  Scenario: Scenario,
-  'v-select': VueSelect.VueSelect
+  Scenario: Scenario
  },
   data: {
     menu: null
@@ -19,4 +18,4 @@ var app = new Vue({
   }
 });
 
-Vue.component('v-select', VueSelect.VueSelect);
+Vue.component('vue-multiselect', window.VueMultiselect.default);
