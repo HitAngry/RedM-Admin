@@ -15,11 +15,17 @@ const Entity = Vue.component('entity', {
     <div class="adminTeleport">
       <label for="entity">Entitées</label>
       <div class="adminSelect">
-        <select name="places" id="entity" v-model="selectedEntity">
-            <option v-for="(entity, index) in entities" :value="entity.model">{{entity.model}}</option>
-        </select>
+        <vue-multiselect
+          v-model="selectedEntity"
+          :options="entities"
+          :show-labels="false"
+        ></vue-multiselect>
       </div>
-      <button v-on:click="createEntity" :disabled="!selectedEntity">Créer l'entitée</button>
+      <button class="button-control" v-on:click="createEntity" :disabled="!selectedEntity">Créer l'entitée</button>
     </div>
   `
 });
+
+{/* <select name="places" id="entity" v-model="selectedEntity">
+<option v-for="(entity, index) in entities" :value="entity.model">{{entity.model}}</option>
+</select> */}

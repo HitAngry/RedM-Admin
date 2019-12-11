@@ -16,10 +16,10 @@
         <transition name="fade">
           <div class="adminSwitchContent" v-if="!menu">
             <button class="adminMenu" v-on:click="menu = 1">Lieux</button>
-            <button class="adminMenu" v-on:click="menu = 2" >Animations</button>
+            <button class="adminMenu" v-on:click="menu = 2" disabled>Animations</button>
             <button class="adminMenu" v-on:click="menu = 3" >Armes</button>
             <button class="adminMenu" v-on:click="menu = 4" >Entitées</button>
-            <button class="adminMenu" v-on:click="menu = 5" >Objets</button>
+            <button class="adminMenu" v-on:click="menu = 5" disabled>Objets</button>
             <button class="adminMenu" v-on:click="menu = 6" disabled>Véhicules</button>
             <button class="adminMenu" v-on:click="quitMenu">Quit</button>
           </div>
