@@ -3,7 +3,7 @@ const Weapon = Vue.component('weapon', {
     return {
       weapons: weapons,
       selectedWeapon: null,
-      ammo: 0
+      ammo: 20
     }
   },
   methods: {

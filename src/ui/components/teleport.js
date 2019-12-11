@@ -12,11 +12,8 @@ const Teleport = Vue.component('teleport', {
   },
   methods: {
     applyTeleportPlace: function() {
-      let place = this.select.split(':');
-      let coords = this.locations[place[0]].places[place[1]].coords;
-      $.post('http://admin/teleportplace', JSON.stringify(coords));
+      $.post('http://admin/teleportplace', JSON.stringify(this.select.coords));
       this.select = null;
-
     },
     applyTeleportCustom: function() {
       $.post('http://admin/teleportcustom', JSON.stringify(this.coords));
