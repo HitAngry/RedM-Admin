@@ -9,12 +9,8 @@ ui_page('src/ui/index.html')
 
 files {
   'src/ui/index.html',
-  'src/ui/components/bin/entities.js',
-  'src/ui/components/bin/locations.js',
-  'src/ui/components/bin/weapons.js',
-  'src/ui/components/weapon.js',
-  'src/ui/components/teleport.js',
-  'src/ui/components/entity.js',
+  'src/ui/components/bin/*.js',
+  'src/ui/components/*.js',
   'src/ui/script.js',
   'src/ui/app.js',
   'src/ui/index.css',
