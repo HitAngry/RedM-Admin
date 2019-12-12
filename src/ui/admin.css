@@ -161,13 +161,18 @@ label {
 }
 
 .multiselect__element {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--secondary-color) !important;
   font-family: "western";
   background-color: var(--primary-color) !important;
 }
 
 .multiselect__content-wrapper {
+  max-height: 300px;
+  width: 410px;
+  position: absolute;
+  right: -4px;
+  border-radius: 5px 0px 5px 5px;
   overflow-x: hidden;
   border: 1px solid var(--primary-color);
 }
