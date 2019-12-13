@@ -9,7 +9,10 @@ const Scenario = Vue.component('scenaio', {
   methods: {
     playScenario: function() {
       console.log(`PLAY SCENARIO ${this.scenaioSelected} ${this.scenarioDelay}`)
-      $.post('http://admin/giveWeapon', JSON.stringify(this.selectedWeapon));
+      $.post('http://admin/startScenario', JSON.stringify({
+        scenario: this.scenaioSelected,
+        delay: this.scenarioDelay
+      }));
     }
   },
   template: `
