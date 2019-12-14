@@ -4,15 +4,17 @@ var app = new Vue({
   Teleport: Teleport,
   Entity: Entity,
   Weapon: Weapon,
-  Scenario: Scenario
+  Scenario: Scenario,
+  Prop: Prop,
  },
   data: {
     menu: null
   },
   methods: {
     quitMenu: function() {
-      $.post('http://admin/quitMenu', JSON.stringify({}));
-      display = false;
+      $.post('http://admin/leaveMenu', JSON.stringify({
+        display: display
+      }));
       $("#app").hide();
     }
   }

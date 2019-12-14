@@ -7,13 +7,12 @@ const Entity = Vue.component('entity', {
   },
   methods: {
     createEntity: function() {
-      console.log("CALL CREATE ENTITY " + this.selectedEntity)
       $.post('http://admin/createPed', JSON.stringify(this.selectedEntity));
     }
   },
   template: `
     <div class="adminTeleport">
-      <label for="entity">Entitées</label>
+      <label for="entity" class="adminTeleport-label">Entitées</label>
       <div class="adminSelect">
         <vue-multiselect
           v-model="selectedEntity"
@@ -25,7 +24,3 @@ const Entity = Vue.component('entity', {
     </div>
   `
 });
-
-{/* <select name="places" id="entity" v-model="selectedEntity">
-<option v-for="(entity, index) in entities" :value="entity.model">{{entity.model}}</option>
-</select> */}

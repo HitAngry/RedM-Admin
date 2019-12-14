@@ -26,13 +26,13 @@ const Teleport = Vue.component('teleport', {
   },
   template: `
     <div class="adminTeleport">
-      <label for="place">Lieux pré-enregistrer</label>
+      <label for="place" class="adminTeleport-label">Lieux pré-enregistrer</label>
       <div class="adminSelect">
         <vue-multiselect label="name" selectLabel="" deselectLabel="" selectedLabel="" group-values="places" group-label="location" v-model="select" placeholder="click for search" :options="locations"></vue-multiselect>
       </div>
       <button class="button-control" v-on:click="applyTeleportPlace" :disabled="!select">Téléportation</button>
       <div class="blank2"></div>
-      <label for="place">Coordonnées personnalisées</label>
+      <label for="place" class="adminTeleport-label">Coordonnées personnalisées</label>
       <div class="adminMultiInput">
         <input type="text" placeholder="X" v-model="coords.x">
         <input type="text" placeholder="Y" v-model="coords.y">

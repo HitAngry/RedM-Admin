@@ -125,11 +125,20 @@
   border-radius: 4px;
 }
 
-.adminTeleport label {
-  font-family: sans-serif;
+.adminTeleport-label {
+  font-family: "western";
   font-size: 16px;
   color: var(--secondary-color);
   margin-bottom: 9px;
+  margin-top: 9px;
+}
+
+.adminTeleport-label2 {
+  font-family: "western";
+  font-size: 16px;
+  color: var(--secondary-color);
+  margin-bottom: 9px;
+  margin-top: 9px;
 }
 
 .fade-enter-active {
