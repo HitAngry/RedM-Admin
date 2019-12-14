@@ -17,3 +17,8 @@ on("__cfx_nui:leaveMenu", (event, cb) => {
   SetNuiFocus(event.display, event.display);
   display = !display;
 });
+
+
+// TEMPORARY
+console.warn('Enable FriendlyFire');
+NetworkSetFriendlyFireOption(true);
