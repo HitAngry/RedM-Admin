@@ -4,6 +4,7 @@ setTick(() => { // INTPUT KEYBOARD EVENT
   if (IsControlJustReleased(0, `INPUT_INTERACT_ANIMAL`)) { // E
     SetNuiFocus(!display, !display);
     SendNuiMessage(JSON.stringify({
+      type: "interface",
       display: display
     }));
     display = !display;

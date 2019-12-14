@@ -6,6 +6,8 @@ var app = new Vue({
   Weapon: Weapon,
   Scenario: Scenario,
   Prop: Prop,
+  Model: Model,
+  Coords: Coords
  },
   data: {
     menu: null

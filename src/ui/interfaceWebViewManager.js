@@ -4,8 +4,10 @@ $("#app").hide();
 
 // EVENT FROM CLIENT
 window.addEventListener('message', function(event) {
-  $("#app").show();
-  display = event.data.display;
+  if(event.data.type === "interface") {
+    $("#app").show();
+    display = event.data.data.display;
+  }
 });
 
 // DISABLE INTERFACE

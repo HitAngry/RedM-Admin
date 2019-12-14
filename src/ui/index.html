@@ -20,7 +20,8 @@
             <button class="adminMenu" v-on:click="menu = 3" >Armes</button>
             <button class="adminMenu" v-on:click="menu = 4" >Entitées</button>
             <button class="adminMenu" v-on:click="menu = 5" >Objets</button>
-            <button class="adminMenu" v-on:click="menu = 6" disabled>Véhicules</button>
+            <button class="adminMenu" v-on:click="menu = 6" >Modèles</button>
+            <button class="adminMenu" v-on:click="menu = 7" disabled>Véhicules</button>
             <button class="adminMenu" v-on:click="quitMenu">Quit</button>
           </div>
         </transition>
@@ -40,11 +41,15 @@
           <div class="adminSwitchContent" v-if="menu === 5">
             <Prop />
           </div>
+          <div class="adminSwitchContent" v-if="menu === 6">
+            <Model />
+          </div>
         </transition>
         <transition name="fade">
           <button class="adminBackButton" v-on:click="menu = null" v-if="menu">Retour</button>
         </transition>
       </div>
+      <Coords/>
     </div>
   </body>
   <script src="https://unpkg.com/vue"></script>
@@ -56,6 +61,8 @@
   <script src="../bin/weapons.js"></script>
   <script src="components/scenario.js"></script>
   <script src="components/prop.js"></script>
+  <script src="components/coords.js"></script>
+  <script src="components/model.js"></script>
   <script src="components/teleport.js"></script>
   <script src="components/weapon.js"></script>
   <script src="components/entity.js"></script>

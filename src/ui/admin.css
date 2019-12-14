@@ -30,7 +30,7 @@
 }
 
 .adminSwitchContent {
-  margin-top: 57px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -207,4 +207,11 @@ label {
   color: var(--secondary-color) !important;
   font-family: "western";
   background-color: var(--primary-color) !important;
+}
+
+.coords {
+  font-size: 18px;
+  color: var(--secondary-color);
+  font-family: "western";
+  text-align: center;
 }
