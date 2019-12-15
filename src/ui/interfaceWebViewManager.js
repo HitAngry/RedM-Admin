@@ -6,7 +6,7 @@ $("#app").hide();
 window.addEventListener('message', function(event) {
   if(event.data.type === "interface") {
     $("#app").show();
-    display = event.data.data.display;
+    display = event.data.display;
   }
 });
 

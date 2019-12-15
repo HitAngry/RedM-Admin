@@ -1,7 +1,10 @@
 RegisterNuiCallbackType("getCoords");
-on("__cfx_nui:getCoords", (test) => {
+on("__cfx_nui:getCoords", () => {
   SendNuiMessage(JSON.stringify({
     type: "coords",
-    data: exports.character.getCoords()
+    data: {
+      coords: exports.character.getCoords(),
+      vector: exports.character.getVector()
+    }
   }));
 });

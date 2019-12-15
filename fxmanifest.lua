@@ -1,7 +1,6 @@
 client_script {
   'src/bin/*.js',
   'src/cmds/*.js',
-  'src/stopAnimationByMovement.js',
   'src/interfaceClientManager.js',
 }
 
