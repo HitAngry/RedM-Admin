@@ -12,7 +12,7 @@ window.addEventListener('message', function(event) {
 
 // DISABLE INTERFACE
 window.addEventListener('keypress', (event) => {
-  if(event.key === 'g') { // KEYPRESS 'E'
+  if(event.key === 'g') { // KEYPRESS 'G'
     $.post('http://admin/leaveMenu', JSON.stringify({
       display: display
     }));
